@@ -1,0 +1,12 @@
+{
+    "degree": [
+        { "title": "M.Tech", "branch": "Cyber Security Networks" },
+        { "title": "M.Tech", "branch": "Cyber Forensics" },
+        { "title": "M.Tech", "branch": "Machine Learning" },
+        { "title": "M.Tech", "branch": "MWADE" },
+        { "title": "M.Tech", "branch": "Full Stack Development" },
+        { "title": "M.Tech", "branch": "Cryptographic" }
+
+    ]
+
+}

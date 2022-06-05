@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Student Form</title>
+</head>
+
+<body>
+    <li><a href="{% url 'first' %}"> Homepage</a></li>
+    <h1> This is a Student Form</h1>
+        <form action="/nform2/" method="post" autocomplete="off" enctype="multipart/form-data">
+        {% csrf_token %}  
+            {{ form1 }}
+        <input type="submit" value=" Submit">
+</body>
+</html>

@@ -1,0 +1,25 @@
+<li><a href="{% url 'first' %}"> Homepage</a></li>
+<h1> This table is for Student For searching in table</h1>
+
+<form action="{% url 'result_search' %}" ,method="get">
+    <input name="q" type="text" placeholder="Search here">
+</form>
+
+</h2> Students</h2>
+    <table border="1.5">
+        <th>
+            <td> Name </td>
+            <td> Roll_number </td>
+            <td> Year </td>
+            <td> DOB </td>
+        </th>
+        {% for n in student_rows%}
+        <tr>
+            <td>{{ n.id }}</td>
+            <td>{{ n.name }}</td>
+            <td>{{ n.roll_number }}</td>
+            <td>{{ n.year }}</td>
+            <td>{{ n.dob }}</td>
+        </tr>
+        {% endfor %}
+    </table>

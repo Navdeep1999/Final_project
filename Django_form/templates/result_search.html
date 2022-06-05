@@ -1,0 +1,20 @@
+<li><a href="{% url 'first' %}"> Homepage</a></li>
+<h> Search for Result</h>
+<table>
+    <th>
+        <td> Name</td>
+        <td> Roll Number </td>
+        <td> Year </td>
+        <td> DOB </td>
+    </th>
+    <{% for n in object_list %}
+    <tr>
+        <td>{{ n.id }} </td>
+        <td>{{ n.name }} </td>
+        <td>{{ n.roll_number }} </td>
+        <td>{{ n.year }} </td>
+        <td>{{ n.dob }} </td>
+    </tr>
+    {% endfor %}
+</table>
+

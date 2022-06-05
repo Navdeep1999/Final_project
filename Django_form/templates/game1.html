@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width" intial-scale="1.0">
+    <meta http=-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/game1.css' %}"/>
+    <script src="{% static '/js/game1.js' %}" defer></script>
+
+    <title>TIC-TAC-TOE</title>
+
+</head>
+
+<body>
+    <li><a href="{% url 'first' %}"> Homepage</a></li>
+
+    <h1>Welcome to the TIC TAC TOE Game Console</h1>
+    <h3><span>Player X</span> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span>Player O</span> </h3>
+
+    <div class="board " id="board">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="but">
+        <input type="button" value="Restart" class="but" onclick="window.location.reload(true)">
+    </div>
+    <div class="winning-message " id="winningMessage">
+        <div data-winning-message-text></div>
+        <button id="restartButton">Restart</button>
+
+
+    </div>
+
+
+</body>
+
+</html>

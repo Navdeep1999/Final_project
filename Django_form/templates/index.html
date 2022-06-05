@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First App</title>
+  </head>
+  <body>
+    <li><a href="{% url 'first' %}"> Homepage</a></li>
+    <h1>This is index page and data stored in dataset</h1>
+    <img src="{% static 'st_project/picture/logo.png' %}" alt="Amrita Logo">
+    <h2>THIS IS OUTPUT :{{ inject_var }}</h2>
+<link rel="stylesheet" type='text/css' href="{% static 'style.css' %}">
+<p><a><a href="{% url 'help' %}">Click</a></a> for help</p>
+<p><a><a href="{% url 'nform' %}">Click</a></a> here for adding data to Degree table</p>
+<p><a><a href="{% url 'nform2' %}">Click</a></a>for here adding data to Student table</p>
+<p><a><a href="{% url 'form_search' %}">Click</a></a>for searching value in Student table</p>
+<h2>{{ India }}</h2>    
+
+    
+
+
+
+    <h3> Degree offered</h3>
+
+      <table border="1">
+        {% for r in degree_rows %}
+        <tr>
+          <td>{{r.title }}</td>
+          <td>{{r.branch }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    <h3> Students</h3>
+    
+        <table border="1">
+          {% for r in student_rows %} 
+            <tr>
+              <td>{{ r.id }}</td>
+              <td>{{ r.name }}</td>
+              <td>{{ r.roll_number }}</td>
+              <td>{{ r.year }}</td>
+              <td>{{ r.dob }}</td>
+            </tr>
+          {% endfor %}
+          </table>
+
+
+
+  </body>
+</html>
